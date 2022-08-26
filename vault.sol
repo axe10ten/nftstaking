@@ -21,13 +21,13 @@ contract AxeStaking is Ownable, IERC721Receiver {
   event Claimed(address owner, uint256 amount);
 
   // reference to the Block NFT contract
-  Collection nft;
+  Axe10ten nft;
   axeRewards token;
 
   // maps tokenId to stake
   mapping(uint256 => Stake) public vault; 
 
-   constructor(Collection _nft, axeRewards _token) { 
+   constructor(Axe10ten _nft, axeRewards _token) { 
     nft = _nft;
     token = _token;
   }
