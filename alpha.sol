@@ -6,7 +6,7 @@ import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 
-contract Axe10ten is ERC721Enumerable, Ownable {
+contract FBN is ERC721Enumerable, Ownable {
 
 struct TokenInfo {
         IERC20 paytoken;
