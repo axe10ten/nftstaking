@@ -5,7 +5,7 @@ pragma solidity 0.8.4;
 import "https://github.com/axe10ten/nftstaking/ERC20maxsupply.sol";
 import "https://github.com/axe10ten/nftstaking/alpha.sol";
 
-contract AxeStaking is Ownable, IERC721Receiver {
+contract BloomStaking is Ownable, IERC721Receiver {
 
   uint256 public totalStaked;
   
@@ -21,13 +21,13 @@ contract AxeStaking is Ownable, IERC721Receiver {
   event Claimed(address owner, uint256 amount);
 
   // reference to the Block NFT contract
-  Axe10ten nft;
-  axeRewards token;
+  Bloom nft;
+  BloomRewards token;
 
   // maps tokenId to stake
   mapping(uint256 => Stake) public vault; 
 
-   constructor(Axe10ten _nft, axeRewards _token) { 
+   constructor(Bloom _nft, BloomRewards _token) { 
     nft = _nft;
     token = _token;
   }
