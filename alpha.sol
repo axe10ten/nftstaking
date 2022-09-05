@@ -6,7 +6,7 @@ import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 
-contract FBN is ERC721Enumerable, Ownable {
+contract Bloom is ERC721Enumerable, Ownable {
 
 struct TokenInfo {
         IERC20 paytoken;
@@ -20,12 +20,12 @@ struct TokenInfo {
   string public baseExtension = ".json";
   string public notRevealedUri;
   uint256 public cost = 100 ether;
-  uint256 public maxSupply = 3000;
+  uint256 public maxSupply = 1800;
   uint256 public maxMintAmount = 3;
   uint256 public nftPerAddressLimit = 3;
   bool public paused = false;
   bool public revealed = true;
-  bool public onlyWhitelisted = true;
+  bool public onlyWhitelisted = false;
   address[] public whitelistedAddresses;
   mapping(address => uint256) public addressMintedBalance;
 
