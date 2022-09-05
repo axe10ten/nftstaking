@@ -90,7 +90,7 @@ contract BloomStaking is Ownable, IERC721Receiver {
       Stake memory staked = vault[tokenId];
       require(staked.owner == account, "not an owner");
       uint256 stakedAt = staked.timestamp;
-      rewardmath = 10 ether * (block.timestamp - stakedAt) / 86400 ;
+      rewardmath = 100 ether * (block.timestamp - stakedAt) / 86400 ;
       earned = rewardmath / 100;
       vault[tokenId] = Stake({
         owner: account,
@@ -117,7 +117,7 @@ contract BloomStaking is Ownable, IERC721Receiver {
       Stake memory staked = vault[tokenId];
       require(staked.owner == account, "not an owner");
       uint256 stakedAt = staked.timestamp;
-      rewardmath = 10 ether * (block.timestamp - stakedAt) / 86400;
+      rewardmath = 100 ether * (block.timestamp - stakedAt) / 86400;
       earned = rewardmath / 100;
 
     }
